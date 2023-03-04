@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo apt update
-sudo apt install apache2 
+sudo apt -y install apache2 
 sudo cp /etc/apache2/sites-available/000-default.conf  /etc/apache2/sites-available/000-default.conf.bk
 sudo cat << EOF >>  /etc/apache2/sites-available/000-default.conf  
  <VirtualHost *:80> 
