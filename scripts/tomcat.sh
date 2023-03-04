@@ -42,5 +42,5 @@ sudo systemctl status tomcat
 sudo systemctl enable tomcat
  
 sudo apt -y install lynx
-sudo apt -y install git
+
 
