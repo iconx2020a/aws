@@ -6,11 +6,14 @@ cd /tmp
 wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.6/bin/apache-tomcat-10.1.6.tar.gz
 sudo mkdir -p /opt/tomcat
 sudo tar xzvf apache-tomcat-10*tar.gz -C /opt/tomcat --strip-components=1
+sudo groupadd tomcat
+sudo useradd -g tomcat -d /usr/local/tomcat tomcat
+sudo useradd -g tomcat -c "Tomcat User" -d /usr/local/tomcat tomcat
 sudo chown -R tomcat:tomcat /opt/tomcat/
 sudo chmod -R u+x /opt/tomcat/bin
 sudo cp /etc/systemd/system/tomcat.service /etc/systemd/system/tomcat.service.bk
 sudo cat << EOF >> /etc/systemd/system/tomcat.service
- [Unit]
+[Unit]
 Description=Tomcat
 After=network.target
 
