@@ -12,7 +12,7 @@ sudo useradd -g tomcat -c "Tomcat User" -d /usr/local/tomcat tomcat
 sudo chown -R tomcat:tomcat /opt/tomcat/
 sudo chmod -R u+x /opt/tomcat/bin
 sudo cp /etc/systemd/system/tomcat.service /etc/systemd/system/tomcat.service.bk
-sudo cat << EOF >> /etc/systemd/system/tomcat.service
+sudo cat << EOF > /etc/systemd/system/tomcat.service
 [Unit]
 Description=Tomcat
 After=network.target
