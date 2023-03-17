@@ -2,6 +2,7 @@
 sudo apt update
 sudo apt -y install default-jdk
 sudo apt -y wget
+sudo apt -y install lynx
 cd /tmp 
 wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.6/bin/apache-tomcat-10.1.6.tar.gz
 sudo mkdir -p /opt/tomcat
@@ -43,7 +44,6 @@ sudo systemctl daemon-reload
 sudo systemctl start tomcat
 sudo systemctl status tomcat
 sudo systemctl enable tomcat
- 
-sudo apt -y install lynx
+
 
 
